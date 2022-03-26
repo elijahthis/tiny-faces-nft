@@ -1,0 +1,54 @@
+$green: #0ac05e;
+$blackish: #313131;
+$text-grey1: #676a6c;
+$text-grey2: #817c8c;
+$text-grey3: #7d7987;
+$text-white: #fafafa;
+$dark-blue1: #272d4e;
+$dark-blue2: #425466;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 100%;
+  color: $blackish;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  color: $blackish;
+}
+
+h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.5px;
+  color: #272d4e;
+}
+
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  color: $text-grey1;
+}
