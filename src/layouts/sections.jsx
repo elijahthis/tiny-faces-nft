@@ -1,3 +1,4 @@
+// import { useEffect, useRef } from "react";
 import Logo from "../components/logo";
 import Button from "../components/Button";
 import "../css/main.css";
@@ -9,11 +10,22 @@ import {
   LinkedinIcon,
 } from "../components/svgs";
 
+// import { TweenMax, Power3 } from "gsap";
+
 export const Hero = ({ title, body, image }) => {
+  // useEffect(() => {
+  //   TweenMax.from(heroTitle, 1, {
+  //     opacity: 0,
+  //     y: 40,
+  //     ease: Power3.easeOut,
+  //     delay: 0.5,
+  //   });
+  // }, []);
+
   return (
     <section className="hero-section">
       <div>
-        <h1>{title}</h1>
+        <div className="heading">{title}</div>
         <p>{body}</p>
         <div className="actions">
           <Button>Join Discord</Button>
@@ -28,8 +40,9 @@ export const Hero = ({ title, body, image }) => {
             >
               Demo video
             </p>
-            <div className="play-circle">
+            <div className="play-div">
               <BsPlayFill size={28} />
+              <div className="play-circle"></div>
             </div>
           </div>
         </div>
@@ -54,7 +67,7 @@ export const SectionLayout1 = ({ imgPosn, title, body, image }) => {
         <h3>{title}</h3>
         <p>{body}</p>
       </div>
-      <img src={image} />
+      <img src={image} alt="nft" />
     </section>
   );
 };
@@ -85,7 +98,7 @@ export const CommunityLayout = ({ imgPosn, title, body, image, children }) => {
         <p>{body}</p>
         {children}
       </div>
-      <img src={image} />
+      <img src={image} alt="nft" />
     </section>
   );
 };
@@ -141,13 +154,19 @@ export const Footer = () => {
           <a
             href="https://elijahthis-portfolio.netlify.app"
             target="_blank"
+            rel="noreferrer"
             className="elijah"
           >
             Elijah
           </a>
           <span style={{ marginLeft: "28px" }}>
             UI:{" "}
-            <a href="https://uikit.to" target="_blank" className="elijah">
+            <a
+              href="https://uikit.to"
+              target="_blank"
+              rel="noreferrer"
+              className="elijah"
+            >
               uikit.to
             </a>
           </span>

@@ -1,3 +1,5 @@
+@import "_include-media";
+
 $green: #0ac05e;
 $blackish: #313131;
 $text-grey1: #676a6c;
@@ -51,4 +53,32 @@ p {
   font-size: 22px;
   line-height: 32px;
   color: $text-grey1;
+}
+
+@include media("<tablet") {
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: $blackish;
+  }
+
+  h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: $blackish;
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    color: $text-grey1;
+  }
 }

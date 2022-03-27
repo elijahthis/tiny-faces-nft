@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+import { TweenMax, Power3 } from "gsap";
 import NavBar from "../components/Navbar";
 import {
   Hero,
@@ -27,6 +29,24 @@ import cardImg3 from "../images/card-img3.png";
 import Button from "../components/Button";
 
 const Landing = () => {
+  let heroHeaderRef1 = useRef(null);
+  let heroHeaderRef2 = useRef(null);
+  let heroHeaderRef3 = useRef(null);
+  let heroHeaderRef4 = useRef(null);
+  useEffect(() => {
+    console.log(heroHeaderRef1);
+    TweenMax.staggerTo(
+      [heroHeaderRef1, heroHeaderRef2, heroHeaderRef3, heroHeaderRef4],
+      0.5,
+      {
+        opacity: 1,
+        y: 0,
+        ease: Power3.easeOut,
+      },
+      0.2
+    );
+  }, []);
+
   const cardList = [
     {
       title: "Unique TinyFaces",
@@ -77,9 +97,22 @@ const Landing = () => {
         <Hero
           title={
             <>
-              <span className="highlight">Find</span>
-              {" Your Favourite "}
-              <span className="highlight">Character</span>
+              <h1>
+                <span className="highlight" ref={(el) => (heroHeaderRef1 = el)}>
+                  Find
+                </span>
+              </h1>{" "}
+              <h1>
+                <span ref={(el) => (heroHeaderRef2 = el)}>Your</span>
+              </h1>{" "}
+              <h1>
+                <span ref={(el) => (heroHeaderRef3 = el)}>Favourite </span>
+              </h1>{" "}
+              <h1>
+                <span className="highlight" ref={(el) => (heroHeaderRef4 = el)}>
+                  Character
+                </span>
+              </h1>
             </>
           }
           body="Characterised by soft lighting, vintage colour schemes and quirky
@@ -99,8 +132,8 @@ const Landing = () => {
           body="Characterised by soft lighting, vintage colour schemes and quirky costumes, these generative 3D TinyFaces are the addition to your NFT collection you’ve been waiting for."
         >
           <div className="cards">
-            {cardList.map((card) => (
-              <FeatureCard cardData={card} />
+            {cardList.map((card, ind) => (
+              <FeatureCard cardData={card} key={ind} />
             ))}
           </div>
         </SectionLayout2>
@@ -115,9 +148,9 @@ const Landing = () => {
           body="Characterised by soft lighting, vintage colour schemes and quirky costumes, these generative 3D TinyFaces are the addition to your NFT collection you’ve been waiting for."
         >
           <div className="nfts">
-            <img src={nft1} />
-            <img src={nft2} />
-            <img src={nft3} />
+            <img src={nft1} alt="nft 1" />
+            <img src={nft2} alt="nft 2" />
+            <img src={nft3} alt="nft 3" />
           </div>
         </SectionLayout2>
 
@@ -176,8 +209,8 @@ const Landing = () => {
               </div>
             </div>
             <div className="flash-cards">
-              {flashCardList.map((card) => (
-                <FlashCard cardData={card} />
+              {flashCardList.map((card, ind) => (
+                <FlashCard cardData={card} key={ind} />
               ))}
             </div>
           </div>
@@ -198,13 +231,13 @@ const Landing = () => {
           </div>
           <div className="ellipses">
             <div>
-              {ellipses.slice(0, 3).map((item) => (
-                <img src={item} />
+              {ellipses.slice(0, 3).map((item, ind) => (
+                <img src={item} key={ind} alt="user" />
               ))}
             </div>
             <div>
-              {ellipses.slice(3).map((item) => (
-                <img src={item} />
+              {ellipses.slice(3).map((item, ind) => (
+                <img src={item} key={ind} alt="user" />
               ))}
             </div>
           </div>

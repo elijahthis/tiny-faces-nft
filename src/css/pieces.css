@@ -57,6 +57,33 @@ p {
   color: #676a6c;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: #313131;
+  }
+  h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #313131;
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    color: #676a6c;
+  }
+}
+
 button {
   padding: 10px 40px;
   color: white;
@@ -74,7 +101,8 @@ button {
 }
 
 .feature-card {
-  width: 322px;
+  width: 100%;
+  max-width: 322px;
   height: 364px;
   background-color: #ffffff;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -150,7 +178,8 @@ button {
 }
 
 .qoute-card {
-  width: 525.11px;
+  width: 100%;
+  max-width: 525.11px;
   height: 389.69px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 53.2273px 35.2119px rgba(56, 56, 56, 0.0607407), 0px 27.6373px 17.9642px rgba(56, 56, 56, 0.05), 0px 11.2596px 9.0077px rgba(56, 56, 56, 0.0392593), 0px 2.55901px 4.35031px rgba(56, 56, 56, 0.0240741);
@@ -215,4 +244,39 @@ button {
   place-items: center;
   background-color: #0ac05e;
   border-radius: 4px;
+}
+
+@media (max-width: 1129px) {
+  .feature-card {
+    padding: 40px 28px;
+  }
+  .feature-card img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-card img {
+    display: inline-block;
+  }
+  .flash-card {
+    width: 140px;
+    height: 117px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 6px;
+    padding: 18px;
+  }
+  .qoute-card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
