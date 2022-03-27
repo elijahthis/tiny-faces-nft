@@ -38,7 +38,7 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 34px;
   }
 
@@ -112,7 +112,7 @@ section {
     max-width: 711px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 30px;
   }
   img {
@@ -174,7 +174,7 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 30px;
   }
   p {
@@ -230,13 +230,13 @@ section {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   > * {
     height: 90%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
   }
   img {
@@ -278,7 +278,7 @@ footer {
   & > :first-child {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
@@ -375,7 +375,7 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 30px;
     bottom: -100px;
@@ -407,7 +407,7 @@ footer {
       max-width: 711px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       gap: 20px;
     }
   }
@@ -563,8 +563,8 @@ footer {
     & > :first-child {
       display: flex;
       flex-direction: row;
-      align-items: start;
-      justify-content: start;
+      align-items: flex-start;
+      justify-content: flex-start;
       gap: 30px;
       flex-wrap: wrap;
 

@@ -6,7 +6,7 @@ import "../css/pieces.css";
 
 export const FacebookIcon = ({ link }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <div className="social-icon">
         <TiSocialFacebook size={18} color="white" />
       </div>
@@ -16,7 +16,7 @@ export const FacebookIcon = ({ link }) => {
 
 export const LinkedinIcon = ({ link }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <div className="social-icon">
         <GrLinkedinOption size={18} color="white" />
       </div>
@@ -26,7 +26,7 @@ export const LinkedinIcon = ({ link }) => {
 
 export const TwitterIcon = ({ link }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <div className="social-icon">
         <FaTwitter size={18} color="white" />
       </div>
@@ -36,7 +36,7 @@ export const TwitterIcon = ({ link }) => {
 
 export const GithubIcon = ({ link }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <div className="social-icon">
         <FaGithub size={18} color="white" />
       </div>
